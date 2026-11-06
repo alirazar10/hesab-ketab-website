@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/*
+ * Brand tokens, the same as the app (apps/web/src/app/globals.css). The logo teal is only 3.7:1 on
+ * white, so text and buttons use the darker `brand`. `meter-red` marks the decimal cells of a meter
+ * register, as on a real electricity meter.
+ */
+@theme {
+  --color-ink: #212121;
+  --color-logo: #009688;
+  --color-brand: #00796b;
+  --color-brand-dark: #00695c;
+  --color-brand-deep: #004d40;
+  --color-brand-soft: #e0f2f0;
+  --color-turquoise: #1ac6bd;
+  --color-ground: #f1f6f5;
+  --color-surface: #ffffff;
+  --color-line: #d6e0de;
+  --color-muted: #566663;
+  --color-meter: #212121;
+  --color-meter-red: #d84315;
+
+  --font-sans: var(--font-estedad), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.on-dark :focus-visible {
+  outline-color: var(--color-turquoise);
+}
+
+/*
+ * The register's digit wheel: each cell holds a strip 0–9 that rolls to its digit on load, the way
+ * a meter's counter turns. `--d` is the digit, `--i` the cell's position (for the stagger).
+ */
+.wheel {
+  transform: translateY(calc(var(--d) * -10%));
+  animation: wheel-roll 1400ms cubic-bezier(0.2, 0.75, 0.15, 1) both;
+  animation-delay: calc(250ms + var(--i) * 110ms);
+}
+
+@keyframes wheel-roll {
+  from {
+    transform: translateY(0);
+  }
+}
+
+/* The proportional split bar grows from the right (the reading direction). */
+.split-grow {
+  transform-origin: right;
+  animation: grow 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(1500ms + var(--i) * 120ms);
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .wheel,
+  .split-grow {
+    animation: none;
+  }
+}
