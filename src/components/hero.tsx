@@ -16,10 +16,10 @@ export function Hero() {
     <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:pt-16">
       <div>
         <p className="text-sm font-bold text-brand">{t("eyebrow")}</p>
-        <h1 className="mt-4 text-balance text-4xl font-black leading-[1.35] text-ink sm:text-5xl sm:leading-[1.3] lg:text-[3.6rem]">
+        <h1 className="mt-4 text-balance text-4xl font-black leading-[1.35] text-ink sm:text-5xl sm:leading-[1.3] lg:text-[3.6rem] en:leading-[1.12] en:sm:leading-[1.1] en:lg:text-[3.3rem]">
           {t("title")}
         </h1>
-        <p className="mt-6 max-w-xl text-lg leading-9 text-muted">{t("lead")}</p>
+        <p className="mt-6 max-w-xl text-lg leading-9 text-muted en:leading-8">{t("lead")}</p>
         <div className="mt-9 flex flex-wrap gap-3">
           <a
             href={loginUrl}

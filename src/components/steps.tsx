@@ -9,7 +9,7 @@ export function Steps() {
   return (
     <section id="how" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
       <h2 className="text-3xl font-bold leading-snug sm:text-4xl">{t("title")}</h2>
-      <p className="mt-4 max-w-2xl leading-8 text-muted">{t("lead")}</p>
+      <p className="mt-4 max-w-2xl leading-8 text-muted en:leading-7">{t("lead")}</p>
 
       <ol className="relative mt-12 grid gap-10 md:grid-cols-5 md:gap-6">
         {/* The line the steps sit on (desktop) */}
@@ -26,7 +26,7 @@ export function Steps() {
             </span>
             <div>
               <h3 className="text-lg font-bold md:mt-5">{t(`steps.${key}.title`)}</h3>
-              <p className="mt-2 text-[0.95rem] leading-7 text-muted">{t(`steps.${key}.body`)}</p>
+              <p className="mt-2 text-[0.95rem] leading-7 text-muted en:leading-6">{t(`steps.${key}.body`)}</p>
             </div>
           </li>
         ))}

@@ -9,20 +9,20 @@ export function Example() {
     <section id="example" className="bg-surface">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <h2 className="text-3xl font-bold leading-snug sm:text-4xl">{t("title")}</h2>
-        <p className="mt-4 max-w-2xl leading-8 text-muted">
+        <p className="mt-4 max-w-2xl leading-8 text-muted en:leading-7">
           {t("lead", { total: num(exampleBill), kwh: num(exampleKwh) })}
         </p>
 
-        <table className="mt-10 w-full border-collapse text-right">
+        <table className="mt-10 w-full border-collapse text-start">
           <thead>
             <tr className="border-b-2 border-ink text-sm text-muted">
-              <th scope="col" className="py-3 pe-4 font-bold">
+              <th scope="col" className="py-3 pe-4 text-start font-bold">
                 {t("household")}
               </th>
-              <th scope="col" className="hidden py-3 pe-4 font-bold sm:table-cell">
+              <th scope="col" className="hidden py-3 pe-4 text-start font-bold sm:table-cell">
                 {t("use")}
               </th>
-              <th scope="col" className="py-3 text-left font-bold">
+              <th scope="col" className="py-3 text-end font-bold">
                 {t("share")}
               </th>
             </tr>
@@ -43,18 +43,18 @@ export function Example() {
                     </p>
                   </td>
                   <td className="tnum hidden py-5 pe-4 sm:table-cell">{t("kwh", { value: num(u.kwh) })}</td>
-                  <td className="tnum whitespace-nowrap py-5 text-left text-lg font-bold">{t("afn", { value: num(shareOf(u.kwh)) })}</td>
+                  <td className="tnum whitespace-nowrap py-5 text-end text-lg font-bold">{t("afn", { value: num(shareOf(u.kwh)) })}</td>
                 </tr>
               );
             })}
           </tbody>
           <tfoot>
             <tr>
-              <th scope="row" className="py-5 pe-4 font-bold">
+              <th scope="row" className="py-5 pe-4 text-start font-bold">
                 {t("total")}
               </th>
               <td className="tnum hidden py-5 pe-4 font-bold sm:table-cell">{t("kwh", { value: num(exampleKwh) })}</td>
-              <td className="tnum whitespace-nowrap py-5 text-left text-lg font-black text-brand">
+              <td className="tnum whitespace-nowrap py-5 text-end text-lg font-black text-brand">
                 {t("afn", { value: num(exampleBill) })}
               </td>
             </tr>

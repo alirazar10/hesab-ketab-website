@@ -17,7 +17,7 @@ export function Rules() {
     <section id="fair" className="bg-surface">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <h2 className="text-3xl font-bold leading-snug sm:text-4xl">{t("title")}</h2>
-        <p className="mt-4 max-w-2xl leading-8 text-muted">{t("lead")}</p>
+        <p className="mt-4 max-w-2xl leading-8 text-muted en:leading-7">{t("lead")}</p>
         <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {rules.map(({ key, icon: Icon }) => (
             <div key={key} className="bg-surface p-7">

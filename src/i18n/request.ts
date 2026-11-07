@@ -1,7 +1,9 @@
 import { getRequestConfig } from "next-intl/server";
-import messages from "../../messages/fa.json";
+import { defaultLocale, isLocale, messages } from "./config";
 
-// One locale, no locale in the URL (the same setup as the app).
-export const locale = "fa";
-
-export default getRequestConfig(async () => ({ locale, messages }));
+// The locale comes from `setRequestLocale` in each language's layout and page.
+export default getRequestConfig(async ({ requestLocale }) => {
+  const requested = await requestLocale;
+  const locale = isLocale(requested) ? requested : defaultLocale;
+  return { locale, messages: messages[locale] };
+});

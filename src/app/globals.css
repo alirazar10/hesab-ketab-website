@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* `en:` applies a style only on the English page (Latin text needs less line height than Dari). */
+@custom-variant en (&:where([lang="en"], [lang="en"] *));
+
 /*
  * Brand tokens, the same as the app (apps/web/src/app/globals.css). The logo teal is only 3.7:1 on
  * white, so text and buttons use the darker `brand`. `meter-red` marks the decimal cells of a meter
@@ -64,11 +67,15 @@ body {
   }
 }
 
-/* The proportional split bar grows from the right (the reading direction). */
+/* The proportional split bar grows from where the line starts: the right in Dari, the left in English. */
 .split-grow {
   transform-origin: right;
   animation: grow 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
   animation-delay: calc(1500ms + var(--i) * 120ms);
+}
+
+[dir="ltr"] .split-grow {
+  transform-origin: left;
 }
 
 @keyframes grow {

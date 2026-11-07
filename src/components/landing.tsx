@@ -1,14 +1,17 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { LogoMark } from "@/components/logo-mark";
 import { Hero } from "@/components/hero";
 import { Example } from "@/components/example";
 import { Steps } from "@/components/steps";
 import { Rules } from "@/components/rules";
 import { Residents } from "@/components/residents";
+import { homePaths, type Locale } from "@/i18n/config";
 import { loginUrl } from "@/lib/app-url";
 
-export default function Home() {
+/** The whole landing page, in the language of the route that renders it. */
+export function Landing() {
   const t = useTranslations();
+  const other: Locale = useLocale() === "fa" ? "en" : "fa";
 
   return (
     <>
@@ -26,6 +29,15 @@ export default function Home() {
           </a>
           <a href="#residents" className="hidden text-muted hover:text-ink md:inline">
             {t("nav.residents")}
+          </a>
+          <a
+            href={homePaths[other]}
+            hrefLang={other}
+            lang={other}
+            aria-label={t("nav.otherLanguageLabel")}
+            className="text-muted hover:text-ink"
+          >
+            {t("nav.otherLanguage")}
           </a>
           <a
             href={loginUrl}

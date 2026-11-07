@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "title": "Hesab Ketab: split a building's electricity and water bills between neighbours",
+    "description": "A clear, fair split of a building's electricity, water and service bills between neighbours. Record the meter readings and see each household's share, with an explanation."
+  },
+  "brand": "Hesab Ketab",
+  "nav": {
+    "label": "Page sections",
+    "how": "How it works",
+    "fair": "Splitting bills",
+    "residents": "For neighbours",
+    "signIn": "Sign in",
+    "otherLanguage": "دری",
+    "otherLanguageLabel": "این صفحه به دری"
+  },
+  "hero": {
+    "eyebrow": "For buildings shared by several households",
+    "title": "One bill for everyone, a clear share for every household",
+    "lead": "Hesab Ketab uses the meter readings to split the electricity, water, sewage and trash bills between the households in a building, and shows how each household's share was worked out.",
+    "start": "Create an account",
+    "signIn": "Sign in",
+    "meterLabel": "Main electricity meter",
+    "meterReading": "Current reading: {value}",
+    "consumption": "Used this period",
+    "consumptionValue": "{value} kWh",
+    "bill": "Electricity bill",
+    "billValue": "{value} AFN",
+    "period": "Billing period: Sawr 1405"
+  },
+  "example": {
+    "title": "From the bill to each household's share",
+    "lead": "Electricity is split by what each unit used. An example: the electricity bill is {total} AFN, and the units used {kwh} kWh between them.",
+    "unit": "Unit",
+    "household": "Household",
+    "use": "Used",
+    "share": "Share",
+    "kwh": "{value} kWh",
+    "afn": "{value} AFN",
+    "total": "Total",
+    "explain": "{kwh} of {all} kWh, so {percent}% of the bill",
+    "note": "The shares always add up to exactly the bill, even when the division leaves decimals.",
+    "names": {
+      "rahimi": "Rahimi household",
+      "ahmadi": "Ahmadi household",
+      "nouri": "Nouri household",
+      "haidari": "Haidari household"
+    },
+    "unitName": "Unit {n}"
+  },
+  "how": {
+    "title": "Every month, five steps",
+    "lead": "When the month's bills arrive, open a billing period and work through these steps in order.",
+    "steps": {
+      "readings": {
+        "title": "Meter readings",
+        "body": "Enter the number each meter shows now. The app finds the previous reading itself and works out this period's consumption."
+      },
+      "bills": {
+        "title": "Enter the bills",
+        "body": "Enter the amount of the electricity, water, sewage and trash bills. Add a photo or PDF of the bill if you like."
+      },
+      "calculate": {
+        "title": "Calculate",
+        "body": "Each household's share is calculated and shown with the details of how it was worked out."
+      },
+      "finalize": {
+        "title": "Finalize the period",
+        "body": "Once you have checked the numbers, finalize the period. After that its figures no longer change, and any mistake is corrected with an adjustment."
+      },
+      "payments": {
+        "title": "Record payments",
+        "body": "Record what each household pays. Anything unpaid stays on the household's balance for the next period."
+      }
+    }
+  },
+  "fair": {
+    "title": "Each bill is split its own way",
+    "lead": "The rules neighbours agree on are applied the same way every month.",
+    "rules": {
+      "electricity": {
+        "title": "Electricity bill",
+        "body": "By what each unit's submeter used. A vacant unit's usage is paid either by the owner or by everyone; you choose."
+      },
+      "water": {
+        "title": "Water bill and the water pump",
+        "body": "Water is split by the number of people in each household. The water pump's share of the electricity bill is split the same way, per person."
+      },
+      "trash": {
+        "title": "Trash bill",
+        "body": "Split equally between all households."
+      },
+      "arrears": {
+        "title": "Arrears",
+        "body": "If a bill includes unpaid amounts from earlier periods, they are shown separately so you can decide how they should be paid."
+      },
+      "moveOut": {
+        "title": "A household moving out",
+        "body": "If a household leaves before the bill arrives, its share is estimated from last period's amount so it can settle up on the day. If the real share turns out higher, the owner pays the difference."
+      },
+      "adjust": {
+        "title": "Adjustments",
+        "body": "If you find a mistake after a period is finalized, correct it with an adjustment. The period's figures and history stay as they were."
+      }
+    }
+  },
+  "residents": {
+    "title": "Everyone's share is open, each household's payments are private",
+    "lead": "The building manager invites you to your household. Every neighbour can see each household's share of the shared bills and how it was worked out, but whether a household has paid, its partial payments and what it still owes stay private from the other neighbours.",
+    "points": {
+      "own": "Each household's share of the shared bills is visible to everyone once the period is finalized.",
+      "private": "A household's payments, amount paid and outstanding balance are visible only to that household and the building's managers.",
+      "calendar": "Dates follow the Afghan solar calendar, for example 20 Aqrab 1405."
+    },
+    "card": {
+      "title": "Household statement",
+      "household": "Ahmadi household, Unit 2",
+      "period": "Sawr 1405",
+      "electricity": "Electricity bill",
+      "water": "Water bill",
+      "trash": "Trash bill",
+      "paid": "Paid",
+      "balance": "Outstanding balance",
+      "electricityWhy": "310 of 1,100 kWh",
+      "waterWhy": "5 of 18 people",
+      "trashWhy": "One share of 4 households",
+      "due": "Due date: 15 Jawza 1405"
+    }
+  },
+  "cta": {
+    "title": "Set up your building",
+    "lead": "Register the units, households and meters once. After that, each month you only enter the meter readings and the bill amounts.",
+    "start": "Create an account",
+    "devices": "Works in the browser on a computer or a phone. The app itself is in Dari."
+  },
+  "footer": {
+    "tagline": "A clear, fair split of a building's electricity, water and service bills between neighbours",
+    "signIn": "Sign in"
+  }
+}
