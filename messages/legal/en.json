@@ -1,0 +1,187 @@
+{
+  "labels": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "updated": "Last updated: 18 Aqrab 1405",
+    "home": "Back to home",
+    "legalNav": "Legal"
+  },
+  "privacy": {
+    "description": "What Hesab Ketab collects, who can see it, how long it is kept and how to delete it.",
+    "intro": "Hesab Ketab helps the households of a building split their electricity, water, sewage and trash bills and keep track of what has been paid. This policy explains what information the website and the app handle, who can see it, and the choices you have. In this policy, \"we\" means Hesab Ketab.",
+    "sections": [
+      {
+        "heading": "Information we collect",
+        "bullets": [
+          "Your account: your email address, first and last name, and your password, which is stored only in a scrambled form we cannot read. If you sign in with Google, we receive your name and email address from Google and use them only to create your account and sign you in.",
+          "Your building: its name and address, units and floors, meter numbers, subscription and account numbers, meter readings, bills, and the photos or PDFs of bills that a manager attaches.",
+          "Households: a name, the number of people and, optionally, a phone number. A building's manager enters these. Households may be recorded even if their members never create an account.",
+          "Money records: each household's charges, the payments a manager records, notes on those payments, and adjustments with their written reasons. The service does not handle money and never asks for card or bank details.",
+          "Invitations: the email address of a person invited to a household or to help manage a building, even if that person does not have an account yet.",
+          "Your phone, if you use the app: a push notification token, so we can send you notifications. The camera and your photos are used only when you choose to attach a picture of a bill.",
+          "Activity and technical records: a log of who changed what in a building, and the technical data our servers record when you connect, such as your IP address, device or browser type, and the time of the request."
+        ]
+      },
+      {
+        "heading": "How we use it",
+        "paragraphs": ["We use this information only to:"],
+        "bullets": [
+          "run the service: calculate shares, show statements and balances, and keep each building's history;",
+          "send messages you need: account and password emails, invitations, notifications about new statements and recorded payments, and payment reminders;",
+          "keep the service secure, prevent abuse and find and fix errors."
+        ],
+        "after": "We do not sell your information, we do not show advertising, and we do not use your information to build advertising profiles."
+      },
+      {
+        "heading": "Who can see it inside a building",
+        "bullets": [
+          "A building's managers can see and change all of that building's information, including every household's payments and balances.",
+          "Once a period is finalized, every household linked to the building can see each household's name, number of people, consumption and share of each bill, so that everyone can check the split is fair. Residents can also open the bills and their attached files.",
+          "A household's payments, balance and adjustments are visible only to that household's linked account and the building's managers.",
+          "A household's phone number is visible only to the building's managers and that household's linked account."
+        ]
+      },
+      {
+        "heading": "Who else can see it",
+        "paragraphs": [
+          "The small team that runs Hesab Ketab can view account and building information, including activity records, to operate the service, support users and investigate problems.",
+          "We use these service providers, who process information on our behalf only as needed for their part of the service:"
+        ],
+        "bullets": [
+          "Supabase: database, sign-in and private file storage.",
+          "Vercel: hosting of the website, the app and its servers.",
+          "Resend: sending email.",
+          "Expo, Apple and Google: delivering push notifications to phones.",
+          "Google: sign-in, if you choose to use it.",
+          "Cloudflare: a check that blocks automated sign-ups on the sign-in forms, when it is switched on.",
+          "Sentry: reports of errors in the app, when it is switched on."
+        ],
+        "after": "We may also disclose information if the law requires it, or if it is needed to protect people or the service from harm."
+      },
+      {
+        "heading": "Where information is stored",
+        "paragraphs": ["Our service providers store and process information on servers outside Afghanistan. By using the service, you understand that your information will be handled in those countries, whose laws may differ from those of your own country."]
+      },
+      {
+        "heading": "How long we keep it",
+        "bullets": [
+          "We keep your account until you delete it, and a building's records for as long as the building exists, because a building's billing history is needed by all of its households.",
+          "When you delete your account, your name, email and sign-in details are removed. Records you created in a building stay without your name, a household linked to you is unlinked, and the activity log keeps only an anonymous account number.",
+          "Deleting your account also deletes every building where you are the only manager and no other account is linked, with all of its data. The app lists those buildings before you confirm. If other people's accounts are linked to such a building, you must first add another manager.",
+          "A deleted item may remain in routine backups for a limited time, until those backups are replaced."
+        ]
+      },
+      {
+        "heading": "Your choices and rights",
+        "bullets": [
+          "You can see and change your name, change your password, and delete your account yourself on the account page of the website or the app.",
+          "Information about your household is entered by your building's manager, so please ask the manager to correct it. If you cannot reach them, contact us.",
+          "You can turn off push notifications in your phone's settings, and withdraw camera or photo access at any time.",
+          "You can contact us to ask for a copy of your information, or to correct or delete it. Records a building needs for its accounts may have to be kept, but we will tell you if that applies."
+        ]
+      },
+      {
+        "heading": "Security",
+        "paragraphs": ["Connections to the service are encrypted. Database rules limit each person to the buildings and households they belong to, and bill files are private and opened only through short-lived links. No system is perfectly secure, so please use a strong password and keep it to yourself."]
+      },
+      {
+        "heading": "This website",
+        "paragraphs": ["The public website does not use advertising or analytics tools and does not set tracking cookies. The app uses cookies or equivalent storage on your device only to keep you signed in."]
+      },
+      {
+        "heading": "Children",
+        "paragraphs": ["The service is not meant for children, and accounts are only for people aged 18 or over. If you believe a child has created an account, contact us and we will delete it."]
+      },
+      {
+        "heading": "Changes to this policy",
+        "paragraphs": ["We may update this policy as the service changes. We will change the date at the top of this page, and tell you in the service or by email before any important change takes effect."]
+      },
+      {
+        "heading": "Contact us",
+        "paragraphs": ["For questions or requests about your information, write to us at:"],
+        "email": true
+      }
+    ]
+  },
+  "terms": {
+    "description": "The rules for using the Hesab Ketab website and app.",
+    "intro": "These terms are the agreement between you and Hesab Ketab for using the website and the app. By creating an account or using the service, you accept these terms and our Privacy Policy. If you do not agree, please do not use the service.",
+    "sections": [
+      {
+        "heading": "What the service does",
+        "paragraphs": [
+          "Hesab Ketab lets a building's managers record meter readings and bills, calculates each household's share using the rules described in the app, and keeps track of statements, payments and balances.",
+          "The service only keeps records. It does not collect, hold or transfer money, and it is not a bank or payment service. It is not connected to the electricity company or any other utility, and paying your utility bills remains your responsibility."
+        ]
+      },
+      {
+        "heading": "Your account",
+        "bullets": [
+          "You must be at least 18 years old to create an account.",
+          "Give accurate information and keep your password private. You are responsible for what is done through your account.",
+          "Tell us straight away if you think someone else has used your account."
+        ]
+      },
+      {
+        "heading": "If you manage a building",
+        "bullets": [
+          "You confirm that you have the authority to manage the building's accounts, or that the households have agreed to it.",
+          "You enter information about other people. Only enter what the service needs, make sure it is accurate, and let the households know that their information is recorded here and that their shares can be seen by the other households.",
+          "You are responsible for the readings, bills, payments and adjustments you enter, and for checking the results before you finalize a period.",
+          "Finalizing a period cannot be undone. A finalized period can only be corrected with an adjustment."
+        ]
+      },
+      {
+        "heading": "If you are a resident",
+        "paragraphs": ["When you accept an invitation, your account is linked to your household. You can read your household's statement and each household's share of a finalized period. Use what you see about your neighbours only to check your building's accounts, and do not share it with anyone outside the building."]
+      },
+      {
+        "heading": "Calculations and disagreements",
+        "paragraphs": ["Results depend on the readings, amounts and settings that are entered, and on the split rules of the service. Any estimate, including one for a household moving out, is only an estimate. Hesab Ketab is a tool to help with your building's accounts and is not an official bill. Any disagreement about a share, a payment or a debt is between the people in the building, and we are not a party to it."]
+      },
+      {
+        "heading": "Acceptable use",
+        "paragraphs": ["You must not:"],
+        "bullets": [
+          "enter false information, or information about people without a legitimate reason;",
+          "try to reach accounts, buildings or data you have no permission to see;",
+          "disrupt, overload or attack the service, or get around its limits and security;",
+          "upload unlawful or harmful files, or use the service to harass or harm anyone;",
+          "copy, resell or misuse the service, or collect information from it with automated tools."
+        ]
+      },
+      {
+        "heading": "Your information and ours",
+        "paragraphs": [
+          "The information you enter remains yours. You give us permission to store, process and display it only as needed to run the service for you and the people in your building, as described in the Privacy Policy.",
+          "The service, its name, logo, design and software belong to Hesab Ketab. You may use them only to use the service as intended."
+        ]
+      },
+      {
+        "heading": "Availability and changes",
+        "paragraphs": ["We work to keep the service running, but it may sometimes be interrupted, and we may change or remove features. If we plan to charge for the service or a part of it, we will tell you in advance, and you can stop using it and delete your account before the charge begins. Please keep your own copy of any record that matters to you; statements can be printed or exported as a PDF."]
+      },
+      {
+        "heading": "Ending your use",
+        "paragraphs": ["You can delete your account at any time from the account page. Doing so also deletes any building where you are the only manager and no other account is linked, as explained in the Privacy Policy. We may suspend or close an account that seriously or repeatedly breaks these terms or puts the service or other people at risk."]
+      },
+      {
+        "heading": "No guarantees",
+        "paragraphs": ["The service is provided \"as is\" and \"as available\". To the extent the law allows, we make no promise that it will be uninterrupted or error-free, or suitable for a particular purpose."]
+      },
+      {
+        "heading": "Limit of liability",
+        "paragraphs": ["To the extent the law allows, Hesab Ketab is not responsible for indirect or consequential losses, or for losses caused by wrong information entered into the service, by disagreements between neighbours, or by a late or missed payment of a utility bill. Nothing in these terms removes any right that the law does not allow to be removed."]
+      },
+      {
+        "heading": "Changes to these terms",
+        "paragraphs": ["We may update these terms. We will change the date at the top of this page and tell you in the service or by email before any important change takes effect. If you keep using the service after that, the new terms apply to you."]
+      },
+      {
+        "heading": "Contact us",
+        "paragraphs": ["For questions about these terms, write to us at:"],
+        "email": true
+      }
+    ]
+  }
+}

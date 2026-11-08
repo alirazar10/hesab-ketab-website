@@ -5,6 +5,7 @@ import { Example } from "@/components/example";
 import { Steps } from "@/components/steps";
 import { Rules } from "@/components/rules";
 import { Residents } from "@/components/residents";
+import { SiteFooter } from "@/components/site-footer";
 import { homePaths, type Locale } from "@/i18n/config";
 import { loginUrl } from "@/lib/app-url";
 
@@ -68,18 +69,7 @@ export function Landing() {
         </section>
       </main>
 
-      <footer className="border-t border-line">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <div className="flex items-center gap-2.5">
-            <LogoMark size={24} />
-            <span className="font-bold text-ink">{t("brand")}</span>
-            <span className="hidden sm:inline">{t("footer.tagline")}</span>
-          </div>
-          <a href={loginUrl} className="font-bold text-brand hover:text-brand-dark">
-            {t("footer.signIn")}
-          </a>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

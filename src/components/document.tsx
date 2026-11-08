@@ -3,12 +3,15 @@ import { NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { estedad } from "@/app/fonts";
 import { directions, homePaths, locales, ogLocales, type Locale } from "@/i18n/config";
+import { siteUrl } from "@/lib/site-url";
 import "@/app/globals.css";
 
 /** Title, description and the links between the language versions of the page. */
 export async function localeMetadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
+    // Makes canonical and language links full addresses, on the legal pages too.
+    metadataBase: new URL(siteUrl),
     title: t("title"),
     description: t("description"),
     alternates: {
