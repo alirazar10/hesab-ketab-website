@@ -2,6 +2,7 @@
   "labels": {
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
+    "deletion": "Delete your account",
     "updated": "Last updated: 18 Aqrab 1405",
     "home": "Back to home",
     "legalNav": "Legal"
@@ -180,6 +181,56 @@
       {
         "heading": "Contact us",
         "paragraphs": ["For questions about these terms, write to us at:"],
+        "email": true
+      }
+    ]
+  },
+  "deletion": {
+    "description": "How to delete your Hesab Ketab account and its data, or ask us to delete only some of your data.",
+    "intro": "You can delete your Hesab Ketab account yourself at any time, in the app or on the website. This page explains how, what is removed and what is kept, and how to ask us to delete some of your data without deleting your account.",
+    "sections": [
+      {
+        "heading": "In the app",
+        "steps": [
+          "Open the Hesab Ketab app and sign in.",
+          "Go to the More tab and tap the gear at the top.",
+          "Under Delete account, enter your password (or, if you sign in with Google, your email address) and tap Delete account.",
+          "Confirm."
+        ]
+      },
+      {
+        "heading": "On the website",
+        "steps": [
+          "Sign in at app.hesaabketab.com.",
+          "Open My account at the top of the page.",
+          "Under Delete account, enter your password (or, if you sign in with Google, your email address) and tap Delete account.",
+          "Confirm."
+        ]
+      },
+      {
+        "heading": "What is deleted",
+        "bullets": [
+          "Your account: your name, email address and sign-in details. You lose access to every building.",
+          "Every building where you are the only manager and no other account is linked, with all of its data. These buildings are listed before you confirm.",
+          "If other people's accounts are linked to such a building, the account cannot be deleted until you add another manager in that building's settings."
+        ],
+        "after": "Deletion happens straight away and cannot be undone."
+      },
+      {
+        "heading": "What is kept",
+        "bullets": [
+          "Records you entered in a building that still exists, such as readings, bills and payments, stay without your name, because the other households need their building's history.",
+          "A household linked to your account stays in its building and is only unlinked from you.",
+          "The activity log keeps only an anonymous account number.",
+          "Copies may remain in routine backups for a limited time, until those backups are replaced."
+        ]
+      },
+      {
+        "heading": "Deleting some of your data without deleting your account",
+        "paragraphs": [
+          "You can change your name on the account page yourself. Information about your household is entered by your building's manager, so you can ask the manager to correct or remove it.",
+          "To ask us to delete some or all of your data, or to delete your account if you cannot sign in, write to us from your account's email address and say what you want deleted. We will tell you what we deleted, and if a record must be kept for a building's accounts, we will explain why."
+        ],
         "email": true
       }
     ]

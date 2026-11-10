@@ -11,6 +11,7 @@ const pages: ((locale: Locale) => string)[] = [
   (locale) => homePaths[locale],
   (locale) => legalPath(locale, "privacy"),
   (locale) => legalPath(locale, "terms"),
+  (locale) => legalPath(locale, "deletion"),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

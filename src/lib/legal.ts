@@ -6,12 +6,17 @@ import { homePaths, locales, ogLocales, type Locale } from "@/i18n/config";
 /** Where people write about their data or the terms. It must be a mailbox that is really read. */
 export const contactEmail = "support@hesaabketab.com";
 
-export type LegalDocument = "privacy" | "terms";
+export type LegalDocument = "privacy" | "terms" | "deletion";
+
+/** The address of each document after the language prefix. */
+const slugs: Record<LegalDocument, string> = { privacy: "privacy", terms: "terms", deletion: "delete-account" };
 
 type Section = {
   heading: string;
   paragraphs?: string[];
   bullets?: string[];
+  /** Numbered steps. */
+  steps?: string[];
   /** A sentence that comes after the bullets. */
   after?: string;
   /** Show the contact address at the end of the section. */
@@ -19,14 +24,14 @@ type Section = {
 };
 
 type LegalText = {
-  labels: Record<"privacy" | "terms" | "updated" | "home" | "legalNav", string>;
+  labels: Record<LegalDocument | "updated" | "home" | "legalNav", string>;
 } & Record<LegalDocument, { description: string; intro: string; sections: Section[] }>;
 
 const legal: Record<Locale, LegalText> = { fa, en };
 
 export const legalText = (locale: Locale) => legal[locale];
 
-export const legalPath = (locale: Locale, document: LegalDocument) => `${homePaths[locale]}${document}/`;
+export const legalPath = (locale: Locale, document: LegalDocument) => `${homePaths[locale]}${slugs[document]}/`;
 
 /** Title, description and the links between the language versions of a legal page. */
 export function legalMetadata(locale: Locale, document: LegalDocument): Metadata {

@@ -25,6 +25,9 @@ export function SiteFooter() {
           <a href={legalPath(locale, "terms")} className="hover:text-ink">
             {labels.terms}
           </a>
+          <a href={legalPath(locale, "deletion")} className="hover:text-ink">
+            {labels.deletion}
+          </a>
           <a href={loginUrl} className="font-bold text-brand hover:text-brand-dark">
             {t("footer.signIn")}
           </a>

@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { homePaths, type Locale } from "@/i18n/config";
 import { contactEmail, legalPath, legalText, type LegalDocument } from "@/lib/legal";
 
-/** The Privacy Policy or the Terms of Use, in the language of the route that renders it. */
+/** The Privacy Policy, the Terms of Use or the account deletion page, in the language of the route that renders it. */
 export function LegalPage({ locale, document }: { locale: Locale; document: LegalDocument }) {
   const t = useTranslations();
   const { labels, [document]: content } = legalText(locale);
@@ -44,6 +44,13 @@ export function LegalPage({ locale, document }: { locale: Locale; document: Lega
                   {paragraph}
                 </p>
               ))}
+              {section.steps && (
+                <ol className="mt-4 list-decimal space-y-3 ps-5 leading-8 text-muted marker:font-bold marker:text-brand en:leading-7">
+                  {section.steps.map((step) => (
+                    <li key={step}>{step}</li>
+                  ))}
+                </ol>
+              )}
               {section.bullets && (
                 <ul className="mt-4 list-disc space-y-3 ps-5 leading-8 text-muted marker:text-brand en:leading-7">
                   {section.bullets.map((bullet) => (
