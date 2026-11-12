@@ -19,6 +19,7 @@
     "lead": "Hesab Ketab uses the meter readings to split the electricity, water, sewage and trash bills between the households in a building, and shows how each household's share was worked out.",
     "start": "Create an account",
     "signIn": "Sign in",
+    "download": "Download the app",
     "meterLabel": "Main electricity meter",
     "meterReading": "Current reading: {value}",
     "consumption": "Used this period",

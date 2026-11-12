@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { exampleBill, exampleKwh, exampleUnits, num } from "@/lib/example";
-import { loginUrl } from "@/lib/app-url";
+import { downloadUrl, loginUrl } from "@/lib/app-url";
 import { Register } from "./register";
 
 const reading = "12458.7";
@@ -32,6 +32,12 @@ export function Hero() {
             className="rounded-lg border border-line bg-surface px-6 py-3.5 font-bold text-ink transition-colors hover:border-brand hover:text-brand"
           >
             {t("signIn")}
+          </a>
+          <a
+            href={downloadUrl}
+            className="rounded-lg px-4 py-3.5 font-bold text-brand transition-colors hover:text-brand-dark"
+          >
+            {t("download")}
           </a>
         </div>
       </div>

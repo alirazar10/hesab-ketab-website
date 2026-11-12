@@ -3,3 +3,6 @@ export const appUrl = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000
 
 /** Sign-in and sign-up share one page in the app. */
 export const loginUrl = `${appUrl}/login`;
+
+/** The app's public page for installing it (the Android file, or the website on a home screen). */
+export const downloadUrl = `${appUrl}/download`;
