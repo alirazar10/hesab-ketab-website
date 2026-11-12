@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { estedad } from "@/app/fonts";
-import { directions, homePaths, locales, ogLocales, type Locale } from "@/i18n/config";
+import { directions, homePaths, type Locale } from "@/i18n/config";
+import { icons, languageLinks, socialTags } from "@/lib/seo";
 import { siteUrl } from "@/lib/site-url";
 import "@/app/globals.css";
 
@@ -14,11 +15,9 @@ export async function localeMetadata(locale: Locale): Promise<Metadata> {
     metadataBase: new URL(siteUrl),
     title: t("title"),
     description: t("description"),
-    alternates: {
-      canonical: homePaths[locale],
-      languages: Object.fromEntries(locales.map((l) => [l, homePaths[l]])),
-    },
-    openGraph: { title: t("title"), description: t("description"), locale: ogLocales[locale], type: "website" },
+    alternates: { canonical: homePaths[locale], languages: languageLinks((l) => homePaths[l]) },
+    icons,
+    ...socialTags(locale, { title: t("title"), description: t("description"), path: homePaths[locale], type: "website" }),
   };
 }
 

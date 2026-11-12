@@ -3,7 +3,7 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "deletion": "Delete your account",
-    "updated": "Last updated: 18 Aqrab 1405",
+    "updated": "Last updated: 13 Aqrab 1405",
     "home": "Back to home",
     "legalNav": "Legal"
   },
@@ -20,6 +20,7 @@
           "Money records: each household's charges, the payments a manager records, notes on those payments, and adjustments with their written reasons. The service does not handle money and never asks for card or bank details.",
           "Invitations: the email address of a person invited to a household or to help manage a building, even if that person does not have an account yet.",
           "Your phone, if you use the app: a push notification token, so we can send you notifications. The camera and your photos are used only when you choose to attach a picture of a bill.",
+          "Messages you send us: if you write to us by email, we keep the message and your email address so we can answer and follow up.",
           "Activity and technical records: a log of who changed what in a building, and the technical data our servers record when you connect, such as your IP address, device or browser type, and the time of the request."
         ]
       },

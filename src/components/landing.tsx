@@ -5,6 +5,7 @@ import { Example } from "@/components/example";
 import { Steps } from "@/components/steps";
 import { Rules } from "@/components/rules";
 import { Residents } from "@/components/residents";
+import { StructuredData } from "@/components/structured-data";
 import { SiteFooter } from "@/components/site-footer";
 import { homePaths, type Locale } from "@/i18n/config";
 import { loginUrl } from "@/lib/app-url";
@@ -12,10 +13,12 @@ import { loginUrl } from "@/lib/app-url";
 /** The whole landing page, in the language of the route that renders it. */
 export function Landing() {
   const t = useTranslations();
-  const other: Locale = useLocale() === "fa" ? "en" : "fa";
+  const locale = useLocale() as Locale;
+  const other: Locale = locale === "fa" ? "en" : "fa";
 
   return (
     <>
+      <StructuredData locale={locale} name={t("brand")} description={t("meta.description")} />
       <header className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-5 sm:px-8">
         <a href="#" className="flex items-center gap-2.5 text-xl font-black">
           <LogoMark size={36} />

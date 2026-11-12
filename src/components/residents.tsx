@@ -22,7 +22,7 @@ export function Residents() {
           <h2 className="text-3xl font-bold leading-snug sm:text-4xl">{t("title")}</h2>
           <p className="mt-4 leading-8 text-white/80">{t("lead")}</p>
           <ul className="mt-8 space-y-4">
-            {(["own", "private", "calendar"] as const).map((key) => (
+            {(["own", "private", "calendar", "notices"] as const).map((key) => (
               <li key={key} className="flex gap-3 leading-7">
                 <Check aria-hidden="true" className="mt-1 size-5 shrink-0 text-turquoise" strokeWidth={2.5} />
                 <span>{t(`points.${key}`)}</span>

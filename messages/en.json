@@ -80,7 +80,19 @@
     "rules": {
       "electricity": {
         "title": "Electricity bill",
-        "body": "By what each unit's submeter used. A vacant unit's usage is paid either by the owner or by everyone; you choose."
+        "body": "You choose one of two methods for each building.",
+        "ratio": {
+          "title": "By use",
+          "body": "Every kWh has the same price, and each unit pays for what its submeter used. If your building's bill has a flat rate, pick this one.",
+          "price": "The same price for every kWh"
+        },
+        "tiered": {
+          "title": "Tiered rate",
+          "body": "Each household's own use is priced through the tiers, and the rest of the bill is divided by use, so the more a household uses, the higher its price per kWh.",
+          "price": "The price per kWh rises with use"
+        },
+        "vacant": "A vacant unit's usage is paid either by the owner or by everyone; you choose.",
+        "note": "The app only divides the amount you enter and does not check Breshna's bill."
       },
       "water": {
         "title": "Water bill and the water pump",
@@ -110,7 +122,8 @@
     "points": {
       "own": "Each household's share of the shared bills is visible to everyone once the period is finalized.",
       "private": "A household's payments, amount paid and outstanding balance are visible only to that household and the building's managers.",
-      "calendar": "Dates follow the Afghan solar calendar, for example 20 Aqrab 1405."
+      "calendar": "Dates follow the Afghan solar calendar, for example 20 Aqrab 1405.",
+      "notices": "You get a notification when a new statement is ready or a payment is recorded, and a reminder before the payment deadline."
     },
     "card": {
       "title": "Household statement",
@@ -131,10 +144,11 @@
     "title": "Set up your building",
     "lead": "Register the units, households and meters once. After that, each month you only enter the meter readings and the bill amounts.",
     "start": "Create an account",
-    "devices": "Works in the browser on a computer or a phone. The app itself is in Dari."
+    "devices": "Works in the browser on a computer or a phone, and there is an Android app. A building can have several managers, and statements can be printed or saved as a PDF. The app itself is in Dari."
   },
   "footer": {
     "tagline": "A clear, fair split of a building's electricity, water and service bills between neighbours",
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "copyright": "© {year} Hesab Ketab. All rights reserved."
   }
 }

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import en from "../../messages/legal/en.json";
 import fa from "../../messages/legal/fa.json";
-import { homePaths, locales, ogLocales, type Locale } from "@/i18n/config";
+import { homePaths, type Locale } from "@/i18n/config";
+import { icons, languageLinks, socialTags } from "@/lib/seo";
 
 /** Where people write about their data or the terms. It must be a mailbox that is really read. */
 export const contactEmail = "support@hesaabketab.com";
@@ -41,10 +42,8 @@ export function legalMetadata(locale: Locale, document: LegalDocument): Metadata
   return {
     title,
     description,
-    alternates: {
-      canonical: legalPath(locale, document),
-      languages: Object.fromEntries(locales.map((l) => [l, legalPath(l, document)])),
-    },
-    openGraph: { title, description, locale: ogLocales[locale], type: "article" },
+    alternates: { canonical: legalPath(locale, document), languages: languageLinks((l) => legalPath(l, document)) },
+    icons,
+    ...socialTags(locale, { title, description, path: legalPath(locale, document), type: "article" }),
   };
 }

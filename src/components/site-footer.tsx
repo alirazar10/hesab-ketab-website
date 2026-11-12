@@ -9,6 +9,9 @@ export function SiteFooter() {
   const t = useTranslations();
   const locale = useLocale() as Locale;
   const { labels } = legalText(locale);
+  // Dari pages count the year in the Afghan solar calendar, like every date on the site; English pages use the usual year.
+  const now = new Date();
+  const year = locale === "fa" ? new Intl.DateTimeFormat("en-u-ca-persian", { year: "numeric" }).format(now).replace(/\D/g, "") : String(now.getFullYear());
 
   return (
     <footer className="border-t border-line">
@@ -33,6 +36,7 @@ export function SiteFooter() {
           </a>
         </nav>
       </div>
+      <p className="mx-auto max-w-6xl border-t border-line px-5 py-5 text-sm text-muted sm:px-8">{t("footer.copyright", { year })}</p>
     </footer>
   );
 }

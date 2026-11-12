@@ -16,7 +16,10 @@ const pages: ((locale: Locale) => string)[] = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return pages.flatMap((path) => {
-    const languages = Object.fromEntries(locales.map((l) => [l, `${siteUrl}${path(l)}`]));
+    const languages = {
+      ...Object.fromEntries(locales.map((l) => [l, `${siteUrl}${path(l)}`])),
+      "x-default": `${siteUrl}${path(defaultLocale)}`,
+    };
     return locales.map((locale) => ({
       url: `${siteUrl}${path(locale)}`,
       priority: path(defaultLocale) === "/" ? 1 : 0.3,
