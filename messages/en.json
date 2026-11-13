@@ -9,7 +9,7 @@
     "how": "How it works",
     "fair": "Splitting bills",
     "residents": "For neighbours",
-    "app": "In the app",
+    "app": "A look",
     "signIn": "Sign in",
     "otherLanguage": "دری",
     "otherLanguageLabel": "این صفحه به دری"
@@ -116,7 +116,7 @@
       }
     },
     "desktop": {
-      "title": "On a computer too",
+      "title": "Works on a computer too",
       "body": "The same accounts in the browser, with statements you can print.",
       "alt": "A building's summary page in a desktop browser"
     }
