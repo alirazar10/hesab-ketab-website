@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Check } from "lucide-react";
 import { num } from "@/lib/example";
+import { DarkGlow, SectionHeader } from "./section-header";
 
 // The statement of household Ahmadi (unit 2 in the worked example).
 const lines = [
@@ -14,16 +15,17 @@ const balance = lines.reduce((s, l) => s + l.amount, 0) - paid;
 export function Residents() {
   const t = useTranslations("residents");
   const e = useTranslations("example");
+  const nav = useTranslations("nav");
 
   return (
-    <section id="residents" className="on-dark bg-brand-deep text-white">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2">
+    <section id="residents" className="on-dark relative isolate overflow-hidden bg-brand-deep text-white">
+      <DarkGlow />
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-2 lg:gap-16">
         <div>
-          <h2 className="text-3xl font-bold leading-snug sm:text-4xl">{t("title")}</h2>
-          <p className="mt-4 leading-8 text-white/80">{t("lead")}</p>
+          <SectionHeader dark eyebrow={nav("residents")} title={t("title")} lead={t("lead")} />
           <ul className="mt-8 space-y-4">
             {(["own", "private", "calendar", "notices"] as const).map((key) => (
-              <li key={key} className="flex gap-3 leading-7">
+              <li key={key} className="flex gap-3 leading-7 text-white/90">
                 <Check aria-hidden="true" className="mt-1 size-5 shrink-0 text-turquoise" strokeWidth={2.5} />
                 <span>{t(`points.${key}`)}</span>
               </li>
@@ -31,7 +33,7 @@ export function Residents() {
           </ul>
         </div>
 
-        <div className="rounded-2xl bg-surface p-6 text-ink shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)] sm:p-8">
+        <div className="rounded-3xl bg-surface p-6 text-ink shadow-[0_50px_80px_-30px_rgba(0,0,0,0.6)] ring-1 ring-white/20 sm:p-8 lg:rotate-[-1.5deg] en:lg:rotate-[1.5deg]">
           <div className="flex items-baseline justify-between gap-4 border-b border-line pb-4">
             <div>
               <div className="text-sm text-muted">{t("card.title")}</div>

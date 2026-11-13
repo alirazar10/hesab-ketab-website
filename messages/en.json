@@ -9,6 +9,7 @@
     "how": "How it works",
     "fair": "Splitting bills",
     "residents": "For neighbours",
+    "app": "In the app",
     "signIn": "Sign in",
     "otherLanguage": "دری",
     "otherLanguageLabel": "این صفحه به دری"
@@ -29,6 +30,7 @@
     "period": "Billing period: Sawr 1405"
   },
   "example": {
+    "eyebrow": "A worked example",
     "title": "From the bill to each household's share",
     "lead": "Electricity is split by what each unit used. An example: the electricity bill is {total} AFN, and the units used {kwh} kWh between them.",
     "unit": "Unit",
@@ -72,6 +74,51 @@
         "title": "Record payments",
         "body": "Record what each household pays. Anything unpaid stays on the household's balance for the next period."
       }
+    }
+  },
+  "gallery": {
+    "title": "A look at the app",
+    "eyebrow": "Android and web",
+    "lead": "Screenshots of the Android app with a sample building. The names and amounts are made up, and the app itself is in Dari.",
+    "label": "App screenshots",
+    "prev": "Previous screen",
+    "next": "Next screen",
+    "items": {
+      "home": {
+        "title": "This month at a glance",
+        "body": "See which households still owe.",
+        "alt": "The app's home screen: the current period and the households that owe"
+      },
+      "steps": {
+        "title": "The month's steps, in order",
+        "body": "Readings, bills, calculation and finalizing, each step clear.",
+        "alt": "The steps of a billing period in the app: readings, bills, calculation and finalizing"
+      },
+      "readings": {
+        "title": "Enter the meter readings",
+        "body": "The previous reading comes from last period, and consumption is worked out for you.",
+        "alt": "The meter readings screen in the app"
+      },
+      "explained": {
+        "title": "How was each amount worked out?",
+        "body": "Every household gets a plain explanation.",
+        "alt": "A plain explanation of each amount in one household's share, in the app"
+      },
+      "payments": {
+        "title": "Payments, kept in order",
+        "body": "Who has paid, and what is still owed.",
+        "alt": "The households with what each has paid and still owes, in the app"
+      },
+      "statement": {
+        "title": "A statement for each household",
+        "body": "With the payment deadline, and a PDF to send.",
+        "alt": "One household's statement in the app, with the payment deadline"
+      }
+    },
+    "desktop": {
+      "title": "On a computer too",
+      "body": "The same accounts in the browser, with statements you can print.",
+      "alt": "A building's summary page in a desktop browser"
     }
   },
   "fair": {

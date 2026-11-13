@@ -1,6 +1,8 @@
 import { siteUrl } from "@/lib/site-url";
 import { homePaths, type Locale } from "@/i18n/config";
 import { downloadUrl } from "@/lib/app-url";
+import { galleryIds, phoneImage } from "@/lib/gallery";
+import { shareImages } from "@/lib/seo";
 
 /** What the site is, for search engines: the organization and the application (JSON-LD on the home page). */
 export function StructuredData({ locale, name, description }: { locale: Locale; name: string; description: string }) {
@@ -17,6 +19,9 @@ export function StructuredData({ locale, name, description }: { locale: Locale; 
         applicationCategory: "FinanceApplication",
         operatingSystem: "Web, Android",
         downloadUrl,
+        image: `${siteUrl}${shareImages[locale]}`,
+        // The app screenshots on the page, so search engines can show them with the app.
+        screenshot: galleryIds.map((id) => `${siteUrl}${phoneImage(id).src}`),
         publisher: { "@id": `${siteUrl}/#organization` },
       },
     ],

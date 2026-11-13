@@ -1,15 +1,16 @@
 import { useTranslations } from "next-intl";
+import { SectionHeader } from "./section-header";
 
 // The monthly order of work in the app; the order matters, so the steps are numbered.
 const steps = ["readings", "bills", "calculate", "finalize", "payments"] as const;
 
 export function Steps() {
   const t = useTranslations("how");
+  const nav = useTranslations("nav");
 
   return (
-    <section id="how" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
-      <h2 className="text-3xl font-bold leading-snug sm:text-4xl">{t("title")}</h2>
-      <p className="mt-4 max-w-2xl leading-8 text-muted en:leading-7">{t("lead")}</p>
+    <section id="how" className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+      <SectionHeader eyebrow={nav("how")} title={t("title")} lead={t("lead")} />
 
       <ol className="relative mt-12 grid gap-10 md:grid-cols-5 md:gap-6">
         {/* The line the steps sit on (desktop) */}

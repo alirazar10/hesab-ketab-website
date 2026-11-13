@@ -1,17 +1,15 @@
 import { useTranslations } from "next-intl";
 import { exampleBill, exampleKwh, exampleUnits, num, shareOf } from "@/lib/example";
 import { unitShades } from "./hero";
+import { SectionHeader } from "./section-header";
 
 export function Example() {
   const t = useTranslations("example");
 
   return (
     <section id="example" className="bg-surface">
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
-        <h2 className="text-3xl font-bold leading-snug sm:text-4xl">{t("title")}</h2>
-        <p className="mt-4 max-w-2xl leading-8 text-muted en:leading-7">
-          {t("lead", { total: num(exampleBill), kwh: num(exampleKwh) })}
-        </p>
+      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+        <SectionHeader eyebrow={t("eyebrow")} title={t("title")} lead={t("lead", { total: num(exampleBill), kwh: num(exampleKwh) })} />
 
         <table className="mt-10 w-full border-collapse text-start">
           <thead>

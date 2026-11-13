@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
 import { defaultLocale, locales, ogLocales, type Locale } from "@/i18n/config";
 
-/** The image shown when a link to the site is shared (1200x630, in `public/`). */
-const shareImages: Record<Locale, string> = { fa: "/og-fa.png", en: "/og-en.png" };
+/**
+ * The image shown when a link to the site is shared (1200x630, in `public/`): the real app on a phone, with the tagline.
+ * A new file name, not a replaced one, so that Facebook, WhatsApp and the others fetch it again instead of keeping the old card.
+ */
+export const shareImages: Record<Locale, string> = { fa: "/og-fa.jpg", en: "/og-en.jpg" };
+
+/** What the share image shows, for people who cannot see it. */
+const shareImageAlts: Record<Locale, string> = {
+  fa: "برنامهٔ حساب کتاب روی گوشی: سهم هر خانوار از بل‌های ساختمان، با توضیح",
+  en: "The Hesab Ketab app on a phone, showing each household's share of a building's bills with an explanation",
+};
 
 const siteNames: Record<Locale, string> = { fa: "حساب کتاب", en: "Hesab Ketab" };
 
@@ -26,7 +35,7 @@ export function socialTags(
   locale: Locale,
   page: { title: string; description: string; path: string; type: "website" | "article" },
 ): Pick<Metadata, "openGraph" | "twitter"> {
-  const images = [{ url: shareImages[locale], width: 1200, height: 630, alt: siteNames[locale] }];
+  const images = [{ url: shareImages[locale], width: 1200, height: 630, alt: shareImageAlts[locale], type: "image/jpeg" }];
   return {
     openGraph: {
       title: page.title,

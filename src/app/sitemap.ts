@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { defaultLocale, homePaths, locales, type Locale } from "@/i18n/config";
+import { galleryIds, phoneImage } from "@/lib/gallery";
 import { legalPath } from "@/lib/legal";
+import { shareImages } from "@/lib/seo";
 import { siteUrl } from "@/lib/site-url";
 
 // Written to a plain file by the static export.
@@ -20,10 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...Object.fromEntries(locales.map((l) => [l, `${siteUrl}${path(l)}`])),
       "x-default": `${siteUrl}${path(defaultLocale)}`,
     };
+    const isHome = path(defaultLocale) === homePaths[defaultLocale];
     return locales.map((locale) => ({
       url: `${siteUrl}${path(locale)}`,
-      priority: path(defaultLocale) === "/" ? 1 : 0.3,
+      priority: isHome ? 1 : 0.3,
       alternates: { languages },
+      // The home page's pictures, so image search can find them.
+      ...(isHome ? { images: [`${siteUrl}${shareImages[locale]}`, ...galleryIds.map((id) => `${siteUrl}${phoneImage(id).src}`)] } : {}),
     }));
   });
 }

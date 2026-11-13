@@ -93,3 +93,23 @@ body {
     animation: none;
   }
 }
+
+/* The app showcase: the front phone drifts gently, and the line under the chosen feature fills until the next screen. */
+.showcase-float {
+  animation: showcase-float 6s ease-in-out infinite;
+}
+
+@keyframes showcase-float {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.showcase-progress {
+  transform-origin: right;
+  animation: grow linear both;
+}
+
+[dir="ltr"] .showcase-progress {
+  transform-origin: left;
+}

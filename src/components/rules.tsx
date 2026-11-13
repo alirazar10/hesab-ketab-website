@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { SectionHeader } from "./section-header";
 import { DoorOpen, Droplets, FilePenLine, ReceiptText, Trash2, Zap, type LucideIcon } from "lucide-react";
 
 const others: { key: "water" | "trash" | "arrears" | "moveOut" | "adjust"; icon: LucideIcon }[] = [
@@ -14,12 +15,12 @@ const bars = { ratio: [4, 4, 4, 4, 4], tiered: [2, 3, 5, 7, 9] } as const;
 
 export function Rules() {
   const t = useTranslations("fair");
+  const nav = useTranslations("nav");
 
   return (
     <section id="fair" className="bg-surface">
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
-        <h2 className="text-3xl font-bold leading-snug sm:text-4xl">{t("title")}</h2>
-        <p className="mt-4 max-w-2xl leading-8 text-muted en:leading-7">{t("lead")}</p>
+      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+        <SectionHeader eyebrow={nav("fair")} title={t("title")} lead={t("lead")} />
 
         <div className="mt-12 rounded-3xl bg-ground p-6 sm:p-10">
           <div className="flex items-center gap-3">
