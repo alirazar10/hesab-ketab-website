@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { defaultLocale, homePaths, locales, type Locale } from "@/i18n/config";
 import { galleryIds, phoneImage } from "@/lib/gallery";
+import { contactPath } from "@/lib/contact";
 import { legalPath } from "@/lib/legal";
 import { shareImages } from "@/lib/seo";
 import { siteUrl } from "@/lib/site-url";
@@ -14,6 +15,7 @@ const pages: ((locale: Locale) => string)[] = [
   (locale) => legalPath(locale, "privacy"),
   (locale) => legalPath(locale, "terms"),
   (locale) => legalPath(locale, "deletion"),
+  contactPath,
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

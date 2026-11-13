@@ -1,5 +1,6 @@
 import { siteUrl } from "@/lib/site-url";
 import { homePaths, type Locale } from "@/i18n/config";
+import { contacts } from "@/lib/contact";
 import { downloadUrl } from "@/lib/app-url";
 import { galleryIds, phoneImage } from "@/lib/gallery";
 import { shareImages } from "@/lib/seo";
@@ -9,7 +10,10 @@ export function StructuredData({ locale, name, description }: { locale: Locale; 
   const data = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Organization", "@id": `${siteUrl}/#organization`, name, url: `${siteUrl}/`, logo: `${siteUrl}/icon-512.png` },
+      { "@type": "Organization", "@id": `${siteUrl}/#organization`, name, url: `${siteUrl}/`, logo: `${siteUrl}/icon-512.png`,
+        sameAs: [contacts.facebook.href],
+        contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: "info@hesaabketab.com", telephone: contacts.whatsapp.display },
+      },
       {
         "@type": "SoftwareApplication",
         name,

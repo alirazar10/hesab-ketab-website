@@ -2,6 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { LogoMark } from "@/components/logo-mark";
 import type { Locale } from "@/i18n/config";
 import { loginUrl } from "@/lib/app-url";
+import { contactPath } from "@/lib/contact";
 import { legalPath, legalText } from "@/lib/legal";
 
 /** The footer of every page, with the links to the legal documents. */
@@ -30,6 +31,9 @@ export function SiteFooter() {
           </a>
           <a href={legalPath(locale, "deletion")} className="hover:text-ink">
             {labels.deletion}
+          </a>
+          <a href={contactPath(locale)} className="hover:text-ink">
+            {t("footer.contact")}
           </a>
           <a href={loginUrl} className="font-bold text-brand hover:text-brand-dark">
             {t("footer.signIn")}

@@ -196,6 +196,28 @@
   "footer": {
     "tagline": "A clear, fair split of a building's electricity, water and service bills between neighbours",
     "signIn": "Sign in",
-    "copyright": "© {year} Hesab Ketab. All rights reserved."
+    "copyright": "© {year} Hesab Ketab. All rights reserved.",
+    "contact": "Contact"
+  },
+  "contact": {
+    "title": "Contact us",
+    "description": "Questions, suggestions or a problem with Hesab Ketab? Reach us on WhatsApp, by email or on Facebook.",
+    "intro": "Have a question, need help or an idea to make Hesab Ketab better? Write to us whichever way is easiest for you.",
+    "whatsapp": {
+      "title": "WhatsApp",
+      "body": "For quick questions and help with using the app.",
+      "action": "Message on WhatsApp"
+    },
+    "email": {
+      "title": "Email",
+      "body": "For longer questions, reporting a problem, or requests about your information and account.",
+      "action": "Send an email"
+    },
+    "facebook": {
+      "title": "Facebook",
+      "body": "Follow our page for announcements and news about Hesab Ketab.",
+      "action": "Open the page"
+    },
+    "note": "If your question is about your building's accounts or your statement, please ask your building's manager first, because each building's information is entered by its manager. To delete your account or your information:"
   }
 }
